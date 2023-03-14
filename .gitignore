@@ -9,4 +9,4 @@
 /testfile/tmp.xml
 .settings
 *.log
-/z3/
+/z3/bin/libz3.pdb
