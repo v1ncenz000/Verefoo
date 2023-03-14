@@ -83,7 +83,7 @@
 			<artifactId>thrifadt</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>C:\verefoo\lib\junit\junit.jar</systemPath>
+			<systemPath>${project.basedir}/lib/junit/junit.jar</systemPath>
 		</dependency>
 
 		<dependency>
@@ -91,7 +91,7 @@
 			<artifactId>thriftaa</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>C:\verefoo\lib\junit\concurrent-junit-1.0.0.jar</systemPath>
+			<systemPath>${project.basedir}/lib/junit/concurrent-junit-1.0.0.jar</systemPath>
 		</dependency>
 
 		<dependency>
@@ -99,14 +99,14 @@
 			<artifactId>thriftjunit</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>C:\verefoo\lib\lib4j\log4j-api-2.9.1.jar</systemPath>
+			<systemPath>${project.basedir}/lib/lib4j/log4j-api-2.9.1.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>com.verifoo</groupId>
 			<artifactId>thriftjunit2</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>C:\verefoo\lib\lib4j\log4j-core-2.9.1.jar</systemPath>
+			<systemPath>${project.basedir}/lib/lib4j/log4j-core-2.9.1.jar</systemPath>
 		</dependency>
 
 		<!-- Jersey 2.19 -->
@@ -196,16 +196,6 @@
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 			<version>2.1.4.RELEASE</version>
 		</dependency>
-		<dependency>
-	        <groupId>com.sun.xml.bind</groupId>
-	        <artifactId>jaxb-impl</artifactId>
-	        <version>2.3.1</version>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.sun.xml.messaging.saaj</groupId>
-	        <artifactId>saaj-impl</artifactId>
-	        <version>1.5.1</version>
-	    </dependency>
 
 	</dependencies>
 
