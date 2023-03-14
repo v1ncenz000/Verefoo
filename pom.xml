@@ -1,0 +1,300 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>verifoo</groupId>
+	<artifactId>verifoo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<developers>
+		<developer>
+			<name>Calarco Davide</name>
+			<id>Thefolle</id>
+			<roles>
+				<role>
+					REST API developer and designer: controllers, services and repositories
+				</role>
+			</roles>
+			<organization>Politecnico di Torino</organization>
+			<email>cdavide8@gmail.com</email>
+		</developer>
+	</developers>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Spring boot artifact to configure and run tests; it includes Junit and Mockito -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>2.1.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jvnet.jaxb2.maven2</groupId>
+			<artifactId>maven-jaxb2-plugin</artifactId>
+			<version>0.14.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+
+		<!-- Module to generate draft-7 JSON schemas from JAXB-generated POJOs -->
+		<dependency>
+			<groupId>com.github.victools</groupId>
+			<artifactId>jsonschema-generator</artifactId>
+			<version>4.17.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>5.2.13.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.module</groupId>
+			<artifactId>jackson-module-jaxb-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.woodstox</groupId>
+			<artifactId>woodstox-core</artifactId>
+			<version>5.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.verifoo</groupId>
+			<artifactId>thrifadt</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>C:\verefoo\lib\junit\junit.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.verifoo</groupId>
+			<artifactId>thriftaa</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>C:\verefoo\lib\junit\concurrent-junit-1.0.0.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.verifoo</groupId>
+			<artifactId>thriftjunit</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>C:\verefoo\lib\lib4j\log4j-api-2.9.1.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.verifoo</groupId>
+			<artifactId>thriftjunit2</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>C:\verefoo\lib\lib4j\log4j-core-2.9.1.jar</systemPath>
+		</dependency>
+
+		<!-- Jersey 2.19 -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${jersey2.version}</version>
+		</dependency>
+		<!-- swagger and spring fox dependencies -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jersey2-jaxrs</artifactId>
+			<version>1.5.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.2.32</version>
+		</dependency>
+
+		<!-- This dependency has been commented because it furnishes the swagger version 2, while the dependency springdoc-openapi-ui provides the version 3.0.2 -->
+		<!-- <dependency>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger2</artifactId>
+		<version>2.9.2</version>
+		</dependency> -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<!-- Matchers framework, used with JUnit -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Add the support for Spring Boot "repository" pattern implementation -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-neo4j</artifactId>
+			<version>5.1.21.RELEASE</version>
+		</dependency>
+		<!-- Driver for establishing a connection between Tomcat and Neo4j server through HTTP -->
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-ogm-http-driver</artifactId>
+			<version>3.2.19</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft</groupId>
+			<artifactId>z3</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${env.Z3}/com.microsoft.z3.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- Support for HATEOAS hyperlinks -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+			<version>2.1.4.RELEASE</version>
+		</dependency>
+		<dependency>
+	        <groupId>com.sun.xml.bind</groupId>
+	        <artifactId>jaxb-impl</artifactId>
+	        <version>2.3.1</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.sun.xml.messaging.saaj</groupId>
+	        <artifactId>saaj-impl</artifactId>
+	        <version>1.5.1</version>
+	    </dependency>
+
+	</dependencies>
+
+	<properties>
+		<jersey2.version>2.19</jersey2.version>
+		<jaxrs.version>2.0.1</jaxrs.version>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.1.4.RELEASE</version>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
+				<executions>
+					<execution>
+						<id>add-source-for-verifoo</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaDirectory>xsd/</schemaDirectory>
+							<schemaIncludes>
+								<include>nfvSchema.xsd</include>
+							</schemaIncludes>
+							<generateDirectory>gen-src/</generateDirectory>
+							<generatePackage>it.polito.verefoo.jaxb</generatePackage>
+							<!-- <forceRegenerate>true</forceRegenerate> -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Plugin to run integration tests -->
+			<!-- Command to run integration tests: mvn verify -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.22.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- This parameter redirects the report to the console (if false) or to ${project.basedir}/target/failsafe-reports/failsafe-summary.xml -->
+					<useFile>false</useFile>
+					<testClassesDirectory>${project.basedir}/target/classes</testClassesDirectory>
+					<!-- Use this parameter to narrow the set of integration tests to run -->
+					<!-- <test>SimulationIT</test> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

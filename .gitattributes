@@ -1,0 +1,2 @@
+webapp/* linguist-vendored
+*.pdb filter=lfs diff=lfs merge=lfs -text
